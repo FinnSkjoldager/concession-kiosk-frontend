@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Concession Kiosk - Thank You!</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Concession Kiosk - All orders</h1>
+    <div>
+      <p>
+        <%= orders %> 
+    </p>
+    </div>
+    <div>
+      Your order contains: <% if (order) { %>
+      <p>Hotdogs: <%= order.hotdog %></p>
+      <p>Hamburgers: <%= order.hamburger %></p>
+      <p>Salads: <%= order.salad %></p>
+      <p>Pizzas: <%= order.pizza %></p>
+      <p>Sodas: <%= order.soda %></p>  
+      <% } %>  
+    </div>
+  </body>
+</html>
