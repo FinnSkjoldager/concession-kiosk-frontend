@@ -10,7 +10,7 @@ const router = express.Router();
             res.render('list', {orders});
             
           };  
-  };
+  )};
 });
 module.exports = router;
 
