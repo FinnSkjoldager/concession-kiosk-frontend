@@ -1,13 +1,18 @@
 const express = require('express');
 const router = express.Router();
 var request = require('request');
-const host = '172.30.237.8';
+var host = '172.30.237.8';
 const port = 8080;
+/* DEVELLUPMENT */
+if (false){
+  host =  'localhost';
+}
 /* GET request for thank you page */
-console.log("ENTER LIST.JS ");
+const url = 'http://'+host+':'+port+'/allorders';
+console.log("ENTER LIST.JS "+url);
 router.get('/', function(req, res, next) {
       //http://localhost:8080
-        request.get('http://'+host+':'+port+'/allorders', function(err, response, body) {
+        request.get(url, function(err, response, body) {
                 if(err){
                   console.log("FRONTEND ERROR GET /ALLORDERS");
                 } else {
