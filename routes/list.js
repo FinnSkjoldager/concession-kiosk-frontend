@@ -11,7 +11,6 @@ if (false){
 const url = 'http://'+host+':'+port+'/allorders';
 console.log("ENTER LIST.JS "+url);
 router.get('/', function(req, res, next) {
-      //http://localhost:8080
         request.get(url, function(err, response, body) {
                 if(err){
                   console.log("FRONTEND ERROR GET /ALLORDERS");
