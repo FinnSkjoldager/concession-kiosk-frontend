@@ -8,17 +8,32 @@
     <h1>Concession Kiosk - All orders</h1>
     <div>
       <p>
-        <%= orders %> 
-    </p>
+       <script>
+          var row = JSON.stringify(orders);
+          console.log(row);
+      </script>
+           <% for(var i=0; i<orders.result.length; i++) { %>
+            <li>
+                <%= i+"  "+orders.result[i] %>
+            </li>
+        <% } %>
+         <%for (var result in orders){%>
+          <li><%=result%></li>    
+          <%}%>
+      <%= typeof orders %>
+      <%= JSON.stringify(orders).length %>
+      <% var res = orders.result;
+         for (var item in res){ order = res[item]%>
+        <li><%=item%>:<%=order.ticketMaster%></li>    
+          <p>Hotdogs: <%= order.hotdog %></p>
+          <p>Hamburgers: <%= order.hamburger %></p>
+          <p>Salads: <%= order.salad %></p>
+          <p>Pizzas: <%= order.pizza %></p>
+          <p>Sodas: <%= order.soda %></p>  
+        <%}%>
+      <%= 'SLUT' %> 
+      </p>
     </div>
-    <div>
-      Your order contains: <% if (order) { %>
-      <p>Hotdogs: <%= order.hotdog %></p>
-      <p>Hamburgers: <%= order.hamburger %></p>
-      <p>Salads: <%= order.salad %></p>
-      <p>Pizzas: <%= order.pizza %></p>
-      <p>Sodas: <%= order.soda %></p>  
-      <% } %>  
-    </div>
+   
   </body>
 </html>
