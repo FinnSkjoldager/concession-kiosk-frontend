@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 var host = process.env.COMPONENT_BACKEND_HOST || '0.0.0.0';
 var port = process.env.COMPONENT_BACKEND_PORT || 8080;
-console.log(process.env);
+//console.log(process.env);
 host = '172.30.76.62';
 //host = BACKEND_SERVICE_HOST;
 port = 8080;
