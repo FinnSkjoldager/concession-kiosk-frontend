@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 var request = require('request');
-var host = BACKEND_SERVICE_HOST;
+//var host = BACKEND_SERVICE_HOST;
+var host = '172.30.76.62';
 const port = 8080;
 /* DEVELLUPMENT */
 if (false){
